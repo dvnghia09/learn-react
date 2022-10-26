@@ -1,0 +1,50 @@
+.wraper {
+    height: 60px;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.inner {
+    width: 1150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 24px;
+    background-color: transparent;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.action-btn {
+    background-color: #fff;
+    color: #000;
+    font-size: 2.2rem;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 12px;
+}

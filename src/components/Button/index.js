@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
@@ -14,6 +15,7 @@ function Button({
     text = false,
     disable = false,
     rounded = false,
+    className,
     children,
     icon,
     onClick,
@@ -42,7 +44,7 @@ function Button({
         Component = 'a';
     }
 
-    let classes = cx('wrapper', { primary, outline, small, large, text, disable, rounded });
+    let classes = cx('wrapper', { primary, outline, small, large, text, disable, rounded, [className]: className });
     return (
         <Component className={classes} {...props}>
             <span>{children}</span>
@@ -50,5 +52,21 @@ function Button({
         </Component>
     );
 }
+
+Button.propTypes = {
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    text: PropTypes.bool,
+    disable: PropTypes.bool,
+    rounded: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    icon: PropTypes.node,
+    onClick: PropTypes.func,
+};
 
 export default Button;
